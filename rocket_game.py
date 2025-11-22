@@ -14,7 +14,7 @@ bg=pygame.image.load("galaxy.jpg")
 
 
 run=True
-while run:
+while y<500:
     for event in pygame.event.get():
         if event.type==pygame.QUIT:
             run=False
@@ -41,7 +41,13 @@ while run:
             y-=5
     elif keys[2]:
         if y<500:
-            y+=5
+            y+=7
+    elif keys[1]:
+        if x>0:
+            x-=5
+    elif keys[3]:
+        if x<500:
+            x+=5
             
         
             
@@ -51,5 +57,5 @@ while run:
     time.sleep(0.02)
     pygame.display.update()
     
-
+print("Game Over!")
 pygame.quit()
